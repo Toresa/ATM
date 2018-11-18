@@ -8,6 +8,7 @@ public class Account {
     private GregorianCalendar dateCreated;
     private static double annualInterestRate;
 
+    //
     Account(int id, double balance){
         this.id = id;
         this.balance = balance;
@@ -41,21 +42,21 @@ public class Account {
     }
 
     public boolean withdraw(double amount){
-        if (amount>0 & amount<=this.getBalance()){
+        if (amount>0 & amount<=this.getBalance()){ //then withdraw amount
             this.balance -= amount;
             return true;
         }
-        else {
+        else { // try again
             return false;
         }
     }
 
     public boolean deposit(double amount){
-        if (amount>0){
+        if (amount>0){  // then itæ's a valid amount
             this.balance += amount;
             return true;
         }
-        else {
+        else { //invalid amount
             return false;
         }
     }
